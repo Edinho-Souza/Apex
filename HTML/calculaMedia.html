@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    //Peça três notas, retorne a média obtida e a situação (7 ou mais aprovado, caso contrário reprovado).
+    //Estrutura do cálculo: (nota1 + nota2 + nota3) / 3
+
+    var nota1 = parseFloat(prompt("Informe a primeira nota: "))
+    var nota2 = parseFloat(prompt("Informe a segunda nota: "))
+    var nota3 = parseFloat(prompt("Informe a terceira nota: "))
+
+    var media = (nota1 + nota2 + nota3) / 3
+
+    if (media >= 7) {
+        document.write("Aluno aprovado com a média " + media.toFixed(2))
+    } else {
+        document.write("Aluno reprovado com a média " + media.toFixed(2))
+    }
+</script>
+
+</html>

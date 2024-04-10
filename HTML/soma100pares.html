@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma 100 primeiros pares</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // exibir a soma dos 100 primeiros números pares.
+
+    var soma = 0
+    var contPares = 0
+
+    for (var i = 0; i <= 200; i++) {
+        if ((i % 2 == 0) && (contPares <= 100)) {
+            soma = soma + i
+            contPares = contPares + 1
+        }
+    }
+    document.write("Total: " + soma)
+
+</script>
+
+</html>

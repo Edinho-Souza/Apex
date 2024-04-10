@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuso Horário</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    /*
+    Crie uma lista com três países, informe a hora atual, retorne o horário daquele país.
+    Exemplo: 19 horário de Brasília
+    Inglaterra: 22 horas (+3 horas)
+    México: 16 horas ( -3 horas )
+    */
+
+    horario = parseInt(prompt("Informe o horário: "))
+
+    if (horario >= 0 && horario <= 24) {
+        document.write("Hora no Brasil " + horario)
+        document.write("<br>")
+        document.write("Hora na Inglaterra " + (horario + 3))
+        document.write("<br>")
+        document.write("Hora no México " + (horario - 3))
+    } else {
+        document.write("Dados inválidos")
+    }
+</script>
+
+</html>

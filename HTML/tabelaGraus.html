@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Graus</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    // gerar uma tabela com a conversão de graus Celsius para Fahrenheit, com valores variando de 1 em 1 grau, 
+    // de 0 a 100 graus Celsius. Utilize a fórmula f = c * 1.8 + 32
+
+    document.write("°C | °F <br>")
+    for (i = 0; i <= 100; i++) {
+        document.write(" " + i + " | " + (i * 1.8 + 32).toFixed(2) + "<br>")
+    }
+
+</script>
+
+</html>

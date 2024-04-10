@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primos</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // imprima todos os números primos de 0 a 100
+    // Um número primo é aquele que é dividido apenas por um e por ele mesmo.Entre 0 e 100 existem apenas 25 números primos.
+
+    for (var numeroAtual = 2; numeroAtual <= 100; numeroAtual++) {
+        var numeroPrimo = true
+        for (numeroDivisor = 2; numeroDivisor < numeroAtual; numeroDivisor++) {
+            if (numeroAtual % numeroDivisor == 0 && numeroAtual != numeroDivisor) {
+                numeroPrimo = false
+            }
+        }
+
+        if (numeroPrimo == true) {
+            document.write(numeroAtual + "<br>")
+        }
+    }
+
+</script>
+
+</html>

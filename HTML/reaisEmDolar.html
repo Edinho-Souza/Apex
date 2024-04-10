@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Real / Dolar</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*
+    Criar um sistema pra converter moedas. Informe o valor de Reais para serem convertidos para Dólar,
+    Vamos usar como base a cotação no valor de R$5,50. Exemplo, se informado R$5,50 de real para dólar, 
+    o retorno será de: U$1,00
+    */
+    var reais = parseFloat(prompt("Informe o valor em reais: "))
+    var dolar = reais / 5.5
+
+    document.write("R$ " + reais + " = U$ " + dolar)
+</script>
+
+</html>

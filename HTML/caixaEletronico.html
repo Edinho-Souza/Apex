@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Eletrônico</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    // Um cliente do Banco deseja realizar um saque, o cliente deve informar um valor, o sistema deverá informar a 
+    //quantidade de notas que devem ser retiradas do cofre. Obs: Priorizar a menor quantidade de notas por saque.
+    // Notas disponíveis:
+    //     2 | 5 | 10 | 20 | 50 | 100
+
+    // Exemplo de output:
+
+    //     Valor do Saque: R$177,00
+    //     Lista de Notas:
+    //     1 nota 2 reais
+    //     1 nota 5 reais
+    //     1 nota 20 reais
+    //     1 nota 50 reais
+    //     1 nota 100 reais
+
+    var valor = parseInt(prompt("Informe o valor do saque:"))
+
+    var lista = [[2, 0], [5, 0], [10, 0], [20, 0], [50, 0], [100, 0]]
+
+    while (valor > 0) {
+
+        if (valor >= 100) {
+            valor -= 100
+            lista[5][1] += 1
+        } else if (valor >= 50) {
+            valor -= 50
+            lista[4][1] += 1
+        } else if (valor >= 20) {
+            valor -= 20
+            lista[3][1] += 1
+        } else if (valor >= 10) {
+            valor -= 10
+            lista[2][1] += 1
+        } else if (valor == 5) {
+            valor -= 5
+            lista[1][1] += 1
+        } else if (valor >= 2) {
+            valor -= 2
+            lista[0][1] += 1
+        }
+    }
+
+    for (var i = 0; i < lista.length; i ++) {
+        if (lista[i][1] > 0) {
+            document.write(lista[i][1] + " notas de " + lista[i][0] + "<br>")
+        }
+    }
+
+</script>
+
+</html>

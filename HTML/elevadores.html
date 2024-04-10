@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevadores</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    // Em um prédio com 50 moradores há três elevadores denominados A, B e C.
+    // Para otimizar o sistema de controle dos elevadores, desenvolva um programa em que cada morador informa qual o elevador que utiliza com mais freqüência (A, B ou C).
+    // O programa deve contabilizar o total de pessoas que usa cada um dos elevadores e mostrar estes totais no final.
+
+    var qtA = 0
+    var qtB = 0
+    var qtC = 0
+    var qtMoradores = parseInt(prompt("Quantidade de moradores:"))
+
+    for (var i = 1; i <= qtMoradores; i++) {
+
+        var elevador = prompt("Elevador que utiliza A | B | C | S - Sair")
+
+        switch (elevador.toUpperCase()) {
+
+            case "A":
+                qtA += 1
+                break;
+
+            case "B":
+                qtB += 1
+                break;
+
+            case "C":
+                qtC += 1
+                break;
+
+            default:
+                alert("Dados inválidos!")
+                
+        }
+    }
+    document.write("Quantidade de moradores que utiliza o elevador A: " + qtA + "<br>")
+    document.write("Quantidade de moradores que utiliza o elevador B: " + qtB + "<br>")
+    document.write("Quantidade de moradores que utiliza o elevador C : " + qtC + "<br>")
+
+</script>
+
+</html>

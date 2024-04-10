@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idades</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    // solicitar a idade de 5 pessoas e exibir a maior e menor idade, além da média das idades.
+
+    var qtPessoas = 5
+    var maiorIdade = 0
+    var menorIdade = 100
+    var mediaIdades = 0
+
+    for (i = 1; i <= qtPessoas; i++) {
+
+        var idade = parseInt(prompt("Informe a idade da " + i + "ª pessoa: "))
+        mediaIdades += idade
+
+        if (idade > maiorIdade) {
+            maiorIdade = idade
+        }
+        
+        if (idade < menorIdade) {
+            menorIdade = idade
+        }
+    }
+
+    mediaIdades = mediaIdades / qtPessoas
+
+    document.write("Maior idade: " + maiorIdade + "<br>")
+    document.write("Menor idade: " + menorIdade + "<br>")
+    document.write("Média das idades: " + mediaIdades + "<br>")
+
+</script>
+
+</html>

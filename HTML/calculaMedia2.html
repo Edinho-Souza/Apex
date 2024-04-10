@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Média</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // solicite ao usuário 6 notas obtidas por um aluno, exiba a média e caso seja >7, informe que está aprovado.
+
+    var qtNotas = 6
+    var somaNotas = 0
+    var media = 0
+    var nota = 0
+    
+    for  (var i = 1; i <= qtNotas; i ++) {
+        nota = parseFloat(prompt("Nota " + i))
+        somaNotas += nota
+    }
+
+    media = somaNotas / qtNotas
+
+    if (media >= 7) {
+        document.write("Aluno aprovado com média " + media.toFixed(2))
+    } else {
+        document.write("Aluno reprovado com média " + media.toFixed(2))
+    }
+    
+</script>
+</html>

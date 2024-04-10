@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário Família</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// Salário Família:
+// Desenvolva um programa para cálculo do salário família dos 4 funcionários de uma empresa.
+// O programa deve solicitar o salário bruto do funcionário e o total de dependentes.
+// O salário líquido do funcionário será o salário bruto acrescido de 2% sobre cada dependente que o funcionário tiver.
+// Para funcionários com mais de 5 dependentes o cálculo deve ser feito considerando apenas 5 dependentes.
+
+// O salário líquido deve ser calculado e exibido imediatamente após o usuário informar os dados de um funcionário.
+
+var salario = parseFloat(prompt("Salário R$ "))
+var dependentes = parseFloat(prompt("Quantidade de dependentes "))
+
+if (dependentes > 5) {
+    dependentes = 5
+}
+
+var totalSalario = salario + ((salario * 0.02) * dependentes)
+
+document.write("O salário acrescido do salário família é R$ " + totalSalario)
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despesas</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+    Crie um sistema, onde o cliente informa o salário recebido.
+    Em seguida pergunte os valores a serem pagos sobre: conta de luz, telefone, água, mercado, lazer e aluguel.
+    Retorne quanto irá sobrar do seu salário.
+    */
+    
+    var salario = parseFloat(prompt("Salário recebido R$ "))
+    var luz = parseFloat(prompt("Conta de luz R$ "))
+    var telefone = parseFloat(prompt("Conta de telefone R$ "))
+    var agua = parseFloat(prompt("Conta de Água R$ "))
+    var mercado = parseFloat(prompt("Gastos com mercado R$ "))
+    var lazer = parseFloat(prompt("Gastos com lazer R$ "))
+    var aluguel = parseFloat(prompt("Aluguel R$ "))
+
+    var saldo = salario - (luz + telefone + agua + mercado + lazer + aluguel)
+
+    document.write("Saldo restante R$: " + saldo)
+</script>
+</html>

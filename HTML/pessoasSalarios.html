@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoas e Salários</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    // Crie um sistema de cadastros de pessoas e salários,
+    // quando o usuário informar "FIM" ao invés de apenas um nome
+    // o sistema deverá imprimir a lista de nomes e salários informados.
+
+    // Requisitos:
+    // - Nomes repetidos não devem ser inseridos na listagem.
+
+    var cadastro = []
+    var nome = " "
+
+    while (nome.toUpperCase() != "FIM") {
+
+        nome = prompt("Nome:")
+        var repete = false
+        
+        if (nome.toUpperCase() != "FIM") {
+            for (var i = 0; i < cadastro.length; i++) {
+                if (cadastro[i][0] == nome) {
+                    repete = true
+                }
+            }
+
+            if (repete == true) {
+                alert("Nome repetido!!")
+            } else {
+                var salario = parseFloat(prompt("Salário: "))
+                cadastro.push([nome, salario])
+            }
+        }
+        
+    }
+
+    for (var i = 0; i < cadastro.length; i++) {
+        document.write("Nome " + cadastro[i][0] + " Salário " + cadastro[i][1] + "<br>")
+    }
+
+</script>
+
+</html>

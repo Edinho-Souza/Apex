@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero Inicial / Final</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*
+    O usuário informa um número inicial e um número final, em seguida retorne a
+    quantidade de pares e ímpares daquela cadeia de valores.
+    Vamos supor que os números informados foram: 6 e 12, sendo assim serão 4
+    pares (6, 8, 10 e 12) e 3 ímpares (7, 9 e 11).
+    */
+
+    var numInicial = parseInt(prompt("Número inicial:"))
+    var numFinal = parseInt(prompt("Número final:"))
+    var cont = numInicial
+    var pares = 0
+    var impares = 0
+
+    while (cont <= numFinal) {
+
+        if (cont % 2 == 0) {
+            pares += 1
+        } else {
+            impares += 1
+        }
+        
+        cont ++
+
+    }
+    
+    document.write("Quantidade de números pares: " + pares)
+    document.write("<br>")
+    document.write("Quantidade de números ímpares: " + impares)
+
+    // if (numInicial < numFinal) {
+
+    //     var pares = 0
+    //     var impares = 0
+
+    //     for (i = numInicial; i <= numFinal; i++) {
+
+    //         if (i % 2 == 0) {
+    //             pares += 1
+    //         } else {
+    //             impares += 1
+    //         }
+    //     }
+
+    //     document.write("Quantidade de números pares: " + pares)
+    //     document.write("<br>")
+    //     document.write("Quantidade de números ímpares: " + impares)
+
+    // } else {
+    //     document.write("Dads inválidoso")
+    // }
+
+</script>
+
+</html>
